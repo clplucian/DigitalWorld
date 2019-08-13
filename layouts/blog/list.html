@@ -1,0 +1,10 @@
+{{ partial "menu" .}}
+<div>
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Content }}</p>
+
+    {{ range .Pages }}
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <br>
+    {{ end }}
+</div>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>dhtml class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>{{ .Title }}</title>
+    </head>
+    <body>
+        <div>
+            {{ partial "menu" . }}
+            <div>
+                <!--Dispaly only 2 blog posts title-->
+                {{ range first 2 (where .Pages "Section" "blog") }}
+                    {{ .Title }}
+                    <br>
+                {{ end }}
+            </div>
+            {{.Content}} 
+          </div>
+    </body>
+</html>
