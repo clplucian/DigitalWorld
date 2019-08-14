@@ -1,0 +1,25 @@
+<section class="container-fluid border-top border-bottom border-300 bg-light pb-5" id="portofolio">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <h3 class="display-4">{{ with .Site.GetPage "section" "portofolio" }}{{ .Title }}{{ end }}</h3>
+                <p class="display-5 text-muted">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</p>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    {{ range first 10 ( where .Site.RegularPages "Section" "portofolio").ByDate.Reverse }}
+                        <div class="container text-center col-md-3">
+                            <img src="{{ .Params.Image }}" alt="..." class="img-thumbnail shadow p-1 mb-2 bg-white rounded">
+                            <h4>{{ .Title }}</h4>
+                            <p>{{ truncate 100 .Content }}</p>
+                            <a href="{{ .Permalink }}" class="btn btn-danger rounded-pill mt-2 shadow ">See More</a>
+                        </div>
+                    {{ end }}
+                </div>
+                <a href="/portofolio" class="btn btn-danger rounded-pill">See portofolio</a>
+            </div>
+
+        </div>
+    </div>
+</section>
