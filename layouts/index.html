@@ -21,6 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="application/javascript" src="https://mail-templates.o.auroraobjects.eu/contact-form-ajax.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
     <!-- ===============================================-->
     <!--    Document Title-->
@@ -52,40 +53,7 @@
 
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-sparrow pb-0" style="background-color: rgba(0, 0, 0, 0);">
-      <div id="top1" class="container pb-0">
-        <a class="navbar-brand" href="#top">
-          <img class="pt-0 pb-0" style="height: 50px;" src="/img/logo.png">
-        </a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" 
-          data-target="#navbarNavDropdown1" aria-controls="navbarNavDropdown1" aria-expanded="false" 
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarNavDropdown1">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-               <!-- <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" href="#top" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
-                <a class="dropdown-item" href="#">Default</a>
-              </div>-->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#blog">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#products">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portofolio">Portofolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ourstory">Our Story</a>
-            </li>
-          </ul>  
-        </div>
-      </div>
-    </nav>
+   {{ partial "navbar" . }}
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -186,31 +154,96 @@
     </section>
  end of .container-->
       <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section class="border-top border-bottom border-300 bg-light" id="digital-about">
+      <section class="py-0" id="digital-features">
 
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <img class="img-fluid" src="/img/secondary-logo1.png" alt="" />
+          <div class="container-fluid">
+            <div class="row align-items-center py-6 py-md-8 py-lg-0">
+              <div class="col-lg-4 px-lg-5">
+                <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+                  <img class="mr-3" src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image1 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
+                  <div class="media-body">
+                    <div class="overflow-hidden">
+                      <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title1 }} {{ end }}</h4>
+                    </div>
+                    <div class="overflow-hidden">
+                      <p class="mb-0" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Content1 }} {{ end }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 px-lg-5 border-lg-left border-lg-right border-300 py-4 py-md-7">
+                <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
+                  <img class="mr-3" src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image2 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
+                  <div class="media-body">
+                    <div class="overflow-hidden">
+                      <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title2 }} {{ end }}</h4>
+                    </div>
+                    <div class="overflow-hidden">
+                      <p class="mb-0" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Content2 }} {{ end }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 px-lg-5">
+                <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
+                  <img class="mr-3" src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image3 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
+                  <div class="media-body">
+                    <div class="overflow-hidden">
+                      <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title3 }} {{ end }}</h4>
+                    </div>
+                    <div class="overflow-hidden">
+                      <p class="mb-0" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Content3 }} {{ end }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-7 ml-auto">
-              <h3 class="mb-3">Vrei sa deschizi un magazin in mediul online?</h3>
-              <p class="text-sans-serif">
-                  <div class="row mt-4">
-                        <div class="col-lg-4">
-                          <div class="media align-items-center mt-3">
-                            <span class="fas fa-puzzle-piece mr-3 fs-2 text-warning"></span>
-                            <div class="media-body">
-                              <h5 class="mb-0 font-weight-bold text-900">
-                                Text
+          </div>
+          <!-- end of .container-->
+  
+        </section>
+      <!-- <section> begin ============================-->
+          <section class="pt-5 mt-5" id="digital-about">
+
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-md-5">
+                    <img class="img-fluid" src='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Image }} {{ end }}' alt="" />
+                  </div>
+                  <div class="col-md-7 ml-auto">
+                    <h3 class="mb-3"> {{ with .Site.GetPage "section" "digital_info" }} {{ .Title }} {{ end }}</h3>
+                    <p class="text-sans-serif">
+                      {{ with .Site.GetPage "section" "digital_info" }} {{ .Content }} {{ end }}
+                      </p>
+                    <div class="container">
+                    <div class="row mt-4">
+                      <div class="col-lg-4">
+                        <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa1_icon }} {{ end }}'></span>
+                          <div class="media-body">
+                            <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa1_content }} {{ end }}</h5>
                           </div>
                         </div>
                       </div>
+                      <div class="col-lg-4">
+                        <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa2_icon }} {{ end }}'></span>
+                          <div class="media-body">
+                            <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa2_content }} {{ end }}</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa3_icon }} {{ end }}'></span>
+                          <div class="media-body">
+                            <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa3_content }} {{ end }}</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div> 
+                    <a class="btn btn-outline-danger mt-6" href="#">&xrarr; {{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Button }} {{ end }}  </a>
                   </div>
-              <a class="btn btn-outline-danger mt-6" href="#digital-we-do">&xrarr; afla mai multe despre noi</a>
-          </div>
-        </div>
+                </div>
+     
         <!-- end of .container-->
 
       </section>
@@ -231,33 +264,33 @@
             </div>
           </div>
           <div class="row mt-6">
-            <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="bg-dark pb-4">
-                <img id="" class="img-fluid p-5" src="/img/cloud_logo.png" width="600" alt="Cloud" class="my-4 img-fluid" 
-                  data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll" />
+            <div class="col-sm-6 col-lg-3 mb-4 ">
+              <div class="bg-dark pb-4 shadow">
+                <img id="" class="img-fluid p-5 animated fadeIn infinite" src="/img/cloud_logo.png" width="600" alt="Cloud" class="my-4 img-fluid" 
+                  data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"/>
                 <h5 class="py-3 mb-0 text-white">Cloud</h5>
                 <button class="btn btn-danger" id="button-cloud">Detalii</button>
               </div>
             </div>
             <div class="col-sm-6 col-lg-3">
-              <div id="container2" class="bg-dark pb-4">
-                <img class="img-fluid p-5" src="/img/mail_logo.png" width="250" alt="Mail" 
+              <div id="container2" class="bg-dark pb-4 shadow">
+                <img class="img-fluid p-5  animated fadeIn infinite" src="/img/mail_logo.png" width="250" alt="Mail" 
                   data-zanim-xs='{"delay":0.2,"animation":"zoom-in"}' data-zanim-trigger="scroll" />
                 <h5 class="text-white">Mail</h5>
                 <button class="btn btn-danger" id="button-mail">Detalii</button>
               </div>
             </div>
             <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="bg-dark pb-4 text-center">
-                <img class="img-fluid p-5" src="/img/web_design_logo.png" width="222" alt="WebDesign" 
+              <div class="bg-dark pb-4 text-center shadow">
+                <img class="img-fluid p-5  animated fadeIn infinite" src="/img/web_design_logo.png" width="222" alt="WebDesign" 
                   data-zanim-xs='{"delay":0.3,"animation":"zoom-in"}' data-zanim-trigger="scroll" />
                 <h5 class="text-white">Web design</h5>
                 <button class="btn btn-danger" id="button-design">Detalii</button>
               </div>
             </div>
             <div class="col-sm-6 col-lg-3 mb-4">
-              <div class="bg-dark pb-4">
-                <img id="img5 p-5" class="my-4 img-fluid" src="/img/hosting_logo.png" width="98" alt="AplicatiiWeb" 
+              <div class="bg-dark pb-4 shadow">
+                <img id="img5 p-5" class="my-4 img-fluid  animated fadeIn infinite" src="/img/hosting_logo.png" width="98" alt="AplicatiiWeb" 
                   data-zanim-xs='{"delay":0.4,"animation":"zoom-in"}' data-zanim-trigger="scroll" />
                 <h5 class="py-3 mb-0 text-white">Aplicatii web</h5>
                 <button class="btn btn-danger" id="button-hosting">Detalii</button>
@@ -592,69 +625,45 @@
         <!-- end of .container-->
 
       </section>
-
+<!-- ============================ SECTION DIGITAL SOCIAL ============================ -->
       <section class="text-sans-serif" id="digital-socials">
-
         <div class="container">
           <div class="row">
             <div class="col-lg-3 pr-lg-5">
-              <h3 class="mb-3">Mohalmann Solutions</h3>
+              <h3 class="mb-3">{{ with .Site.GetPage "page" "company" }} {{ .Title }} {{ end }}</h3>
               <p>
-                Text
+                {{ with .Site.GetPage "page" "company" }} {{ .Content }}   {{ end }}
               </p>
             </div>
             <div class="col-md-6 col-lg-4 pr-lg-6 ml-lg-auto mt-6 mt-lg-0">
-              <h4 class="mb-3">Info</h4>
+                <h4 class="mb-3"> {{ with .Site.GetPage "page" "info" }} {{ .Title }} {{ end }}</h4>
               <p class="mb-0">
-                Text              </p>
-              <h4 class="mb-3 mt-4">Social Media</h4>
-              Text              <!--
+                {{ with .Site.GetPage "page" "info" }} {{ .Content }}   {{ end }}
+              </p>
+               <h4 class="mb-3 mt-4">{{ with .Site.GetPage "page" "social" }} {{ .Title }} {{ end }}</h4>
+                {{ with .Site.GetPage "page" "social" }}  {{ .Content }}  {{ end }}           
+              <!--
               <a class="btn btn-dark btn-sm mr-2" href="#"><span class="fab fa-twitter"></span></a>
               <a class="btn btn-dark btn-sm mr-2" href="#"><span class="fab fa-google-plus-g"></span></a>
               -->
             </div>
+
             <div class="col-md-6 col-lg-4 mt-6 mt-lg-0">
-              <h4 class="mb-3">Contact</h4>
-              <p class="mb-0"><span class="text-black">Tel:</span>
-                Text              </p>
-              <h4 class="mb-3 mt-4">Unde ne gasesti?</h4>
-              Text            </div>
+              <h4 class="mb-3">{{ with .Site.GetPage "page" "contact" }} {{ .Title }} {{ end }} </h4>
+              <p class="mb-0"><span class="text-black"></span> {{ with .Site.GetPage "page" "contact" }} {{ .Content }} {{ end }}  </p>
+              <h4 class="mb-3 mt-4">{{ with .Site.GetPage "page" "findus" }} {{ .Title }} {{ end}} </h4>
+               {{ with .Site.GetPage "page"  "findus" }} {{ .Content }} {{ end }}           
+            </div>
           </div>
         </div>
         <!-- end of .container-->
-
       </section>
 
     </main>
 
 
 
-    <footer class="footer bg-black text-600 py-4 text-sans-serif text-center overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-4 order-lg-2">
-            <a class="indicator indicator-up" href="#top" data-fancyscroll="data-fancyscroll">
-              <span class="indicator-arrow indicator-arrow-one" 
-                data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'>
-              </span>
-              <span class="indicator-arrow indicator-arrow-two" 
-                data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'>
-              </span></a>
-          </div>
-          <div class="col-lg-4 text-lg-left mt-4 mt-lg-0">
-            <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-              Copyright &copy; 2019 Mohlmann Solutions SRL
-            </p>
-          </div>
-          <div class="col-lg-4 text-lg-right order-lg-2 mt-2 mt-lg-0">
-            <p class="fs--1 text-uppercase ls font-weight-bold mb-0">
-              Creat cu<span class="text-danger fas fa-heart mx-1"></span>de Mohlmann Solutions
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+    {{ partial "footer" . }}
 
     
     <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/js/jquery.min.js"></script>
