@@ -18,5 +18,5 @@ Button: "learn more about us"
 
 ---
 We offer professional SEO services that help websites rise in rank on Google and other search engines — even when it comes to
-<span class="font-weight-extra-bold"> highly competitive keywords.</span> A sound search engine marketing plan that
-includes SEO is essential to increasing your website’s visibility.</p>
+**highly competitive keywords.** A sound search engine marketing plan that
+includes SEO is essential to increasing your website’s visibility.

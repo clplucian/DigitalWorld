@@ -7,9 +7,9 @@
                 <p class="display-5 text-muted">{{ with .Site.GetPage "section" "blog" }}{{ .Content }}{{ end }}</p>
             </div>
 
-            {{ range first 10 ( where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
+            {{ range first 4 ( where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
                 <div class="col-sm-6 pb-4">
-                    <div class="card text-white">
+                    <div class="card text-white" style="height: 100%;">
                         <div class="card-body bg-dark">
                             <h4 class="card-title text-white">{{ .Title }}</h4>
                             <img src="{{ .Params.Image }}" height="250" class="card-img-top" alt="Img BLOG !">
