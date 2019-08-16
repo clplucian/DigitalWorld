@@ -3,6 +3,7 @@ title: "Web Design"
 date: 2019-08-16T17:43:37+03:00
 draft: true
 image: "/img/web_design_logo.png"
+button: "See more"
 ---
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit.

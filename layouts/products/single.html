@@ -1,7 +1,44 @@
-{{ partial "menu" .}}
-<div>
-    <h2>{{ .Title }}</h2>
-    <p>{{ .Date }}</p>
-    <p>{{ .Content }}</p>
+{{  partial "header" . }}
+{{ partial "secondary_navbar" . }}
+   
+            <div class="bg-products p-0" id="top">
+                <div class="row justify-content-center p-8">
+                    <div class="col-lg-7 bg-custom rounded p-3">
+                            <h2 class="text-warning p-4">{{ .Title }}</h2>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <img src='{{ with .Site.GetPage "section" "blog1" }} {{ .Params.Image }} {{ end }}' width="600" alt="BlogImage" class="img-fluid" 
+                                    data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"/>
+                                </div>
+                                <div class="col-sm-6 p-4">
+                                    <p>{{ .Content }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <a class="btn btn-outline-danger mt-6" href="/#digital-contact">&xrarr; Contact Us!  </a>
+                    </div>
+                </div>
+            </div>
 
-</div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ partial "footer" . }}
