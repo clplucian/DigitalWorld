@@ -1,7 +1,47 @@
-{{ partial "menu" .}}
-<div>
-    <h2>{{ .Title }}</h2>
-    <p>{{ .Date }}</p>
-    <p>{{ .Content }}</p>
+ {{  partial "header" . }}
+    {{ partial "secondary_navbar" . }}
+       
+        <div class="bg-site p-0" id="top">
+            <div class="row justify-content-center p-8">
+                <div class="col-lg-7 bg-custom rounded p-3">
+                        <h2 class="text-white p-6">{{ .Title }}</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src='{{ with .Site.GetPage "section" "blog1" }} {{ .Params.Image }} {{ end }}' width="600" alt="BlogImage" class="img-fluid" 
+                                data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <p class="text-400">{{ .Date.Format "1 Jan 2006 15:04" }}</p>
+                    </div>
+                    <div class="container p-4">
+                            <p style="color: #bebebe !important;">{{ .Content }}</p>
+                        </div>
+                        <br>
+                  <a class="btn btn-outline-danger mt-6" href="/blog">&xrarr; {{ with .Site.GetPage "section" "blog" }} {{ .Params.Button }} {{ end }}  </a>
+                </div>
+            </div>
+        </div>
+                
+                    
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+{{ partial "footer" . }}

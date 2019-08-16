@@ -1,0 +1,33 @@
+html,
+body{
+
+margin: 0;
+padding: 0;
+}
+
+.bg-site{
+
+    position: relative;
+    top:0;
+    width: 100%;
+    height: auto;
+    background: url('/img/branch-dawn-environment-1028462.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin-bottom: 0;
+    
+}
+.bg-blog{
+
+    position: relative;
+    top:0;
+    width: 100%;
+    height: auto;
+    background: url('/img/daylight-environment-forest-459225.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin-bottom: 0;
+    
+}
+
+.bg-custom{
+background-color:  rgba(0, 0, 0, 0.472);
+}

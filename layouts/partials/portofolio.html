@@ -8,16 +8,18 @@
 
             <div class="container">
                 <div class="row">
-                    {{ range first 10 ( where .Site.RegularPages "Section" "portofolio").ByDate.Reverse }}
-                        <div class="container text-center col-md-3">
-                            <img src="{{ .Params.Image }}" alt="..." class="img-thumbnail shadow p-1 mb-2 bg-white rounded">
+                    {{ range first 4 ( where .Site.RegularPages "Section" "portofolio").ByDate.Reverse }}
+                        <div class="container text-left col-md-3">
+                           <a href="{{ .Permalink }}"><img src="{{ .Params.Image }}" alt="IMG" class="img-thumbnail shadow p-1 mb-2 bg-white rounded"></a> 
                             <h4>{{ .Title }}</h4>
-                            <p>{{ truncate 100 .Content }}</p>
+                            <div class="row">
+                                <p>{{ truncate 100 .Content }}</p>
+                            </div>
                             <a href="{{ .Permalink }}" class="btn btn-danger rounded-pill mt-2 shadow ">See More</a>
                         </div>
                     {{ end }}
                 </div>
-                <a href="/portofolio" class="btn btn-danger rounded-pill">See portofolio</a>
+                <a class="btn btn-outline-danger mt-6" href="/portofolio">&xrarr; Our Portofolio </a>
             </div>
 
         </div>
