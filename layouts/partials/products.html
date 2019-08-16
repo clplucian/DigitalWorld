@@ -1,0 +1,171 @@
+<section class="text-center text-sans-serif" id="products">
+        <!-- ================-- Products Section (Title and Subtitle) --============================-->
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                      <h6 class="lead mb-0" style="font-size:1.5em;">{{ with .Site.GetPage "section" "products" }} {{ .Params.Title }} {{ end }}</h6>
+                      <p>{{ with .Site.GetPage "section" "products" }} {{ .Params.Content1 }} {{ end }}</p>
+                    </div>
+                  </div>
+        
+                  <div class="row mt-6">
+         <!-- ================-- WebDesign --============================-->
+                      <div class="col-sm-6 col-lg-3 mb-4">
+                          <div class="bg-dark pb-4 text-center shadow">
+                            <img class="img-fluid p-5" src='{{ with .Site.GetPage "section" "products" }} {{ .Params.Image3 }} {{ end }}' width="222" alt="WebDesign" 
+                              data-zanim-xs='{"delay":0.3,"animation":"zoom-in"}' data-zanim-trigger="scroll" />
+                            <h5 class="text-white">{{ with .Site.GetPage "page" "cloud" }} {{ .Title }} {{ end }}</h5>
+                            <button class="btn btn-danger" id="button-design">{{ with .Site.GetPage "section" "products" }} {{ .Params.Button3 }} {{ end }}</button>
+                          </div>
+                        </div>
+        <!-- ================-- WebApplication --============================-->
+                        <div class="col-sm-6 col-lg-3 mb-4">
+                            <div class="bg-dark pb-4 shadow">
+                              <img id="img5 p-5" class="my-4 img-fluid " src='{{ with .Site.GetPage "section" "products" }} {{ .Params.Image4 }} {{ end }}' width="98" alt="AplicatiiWeb" 
+                                data-zanim-xs='{"delay":0.4,"animation":"zoom-in"}' data-zanim-trigger="scroll" />
+                              <h5 class="py-3 mb-0 text-white">{{ with .Site.GetPage "section" "products" }} {{ .Params.Product_title4 }} {{ end }}</h5>
+                              <button class="btn btn-danger" id="button-hosting">{{ with .Site.GetPage "section" "products" }} {{ .Params.Button4 }} {{ end }}</button>
+                            </div>
+                          </div>
+        <!-- ================-- Cloud --============================-->
+                    <div class="col-sm-6 col-lg-3 mb-4 ">
+                      <div class="bg-dark pb-4 shadow">
+                        <img id="" class="img-fluid p-5" src='{{ with .Site.GetPage "section" "products" }} {{ .Params.Image1 }} {{ end }}' width="600" alt="Cloud" class="my-4 img-fluid" 
+                          data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"/>
+                        <h5 class="py-3 mb-0 text-white">{{ with .Site.GetPage "section" "products" }} {{ .Params.Product_title1 }} {{ end }}</h5>
+                        <button class="btn btn-danger" id="button-cloud">{{ with .Site.GetPage "section" "products" }} {{ .Params.Button1 }} {{ end }}</button>
+                      </div>
+                    </div>
+        <!-- ================-- Mail --============================-->
+                    <div class="col-sm-6 col-lg-3">
+                      <div id="container2" class="bg-dark pb-4 shadow">
+                        <img class="img-fluid p-5" src='{{ with .Site.GetPage "section" "products" }} {{ .Params.Image2 }} {{ end }}' width="250" alt="Mail" 
+                          data-zanim-xs='{"delay":0.2,"animation":"zoom-in"}' data-zanim-trigger="scroll" />
+                        <h5 class="text-white">{{ with .Site.GetPage "section" "products" }} {{ .Params.Product_title2 }} {{ end }}</h5>
+                        <button class="btn btn-danger" id="button-mail">{{ with .Site.GetPage "section" "products" }} {{ .Params.Button2 }} {{ end }}</button>
+                      </div>
+                    </div>
+                  </div>
+         <!-- ================-- Small Descripton of products --============================-->         
+                    <div class="row justify-content-center">
+                      <div class="col-lg-8" style="display: none;" id="info-design">
+                        <h2>{{ with .Site.GetPage "section" "products" }} {{ .Params.Description_title_1 }} {{ end }}</h2>
+                        <p class="lead p-4 mb-0 bg-dark rounded text-white shadow">
+                            {{ with .Site.GetPage "section" "products" }} {{ .Params.Description_content_1 }} {{ end }}
+                            <br>
+                            <a class="btn btn-outline-danger mt-6" href="#">&xrarr; {{ with .Site.GetPage "section" "secondary" }} {{ .Params.Button2 }} {{ end }}  </a>
+                        </p>
+                      </div>
+                      
+                    <div class="col-lg-8" style="display: none;" id="info-hosting">
+                        <h2>{{ with .Site.GetPage "section" "products" }} {{ .Params.Description_title_2 }} {{ end }}</h2>
+                        <p class="lead p-4 shadow mb-0 bg-dark rounded text-white">
+                            {{ with .Site.GetPage "section" "products" }} {{ .Params.Description_content_2 }} {{ end }}
+                            <br>
+                            <a class="btn btn-outline-danger mt-6" href="#">&xrarr; {{ with .Site.GetPage "section" "secondary" }} {{ .Params.Button3 }} {{ end }}  </a>
+                        </p>
+                      </div> 
+        
+                    <div class="col-lg-8" style="display: none;" id="info-cloud">
+                      <h2>{{ with .Site.GetPage "section" "products" }} {{ .Params.Description_title_3 }} {{ end }}</h2>
+                      <p class="lead mb-0 p-4 shadow bg-dark rounded text-white">
+                          {{ with .Site.GetPage "section" "products" }} {{ .Params.Description_content_3 }} {{ end }}
+                            <br>
+                            <a class="btn btn-outline-danger mt-6" href="#">&xrarr; {{ with .Site.GetPage "section" "secondary" }} {{ .Params.Button4 }} {{ end }}  </a>
+                      </p>
+                    </div>
+        
+                    <div class="col-lg-8" style="display: none;" id="info-mail">
+                      <h2>{{ with .Site.GetPage "section" "products" }} {{ .Params.Description_title_4 }} {{ end }}</h2>
+                      <p class="lead mb-0 p-4 shadow bg-dark rounded text-white">
+                          {{ with .Site.GetPage "section" "products" }} {{ .Params.Description_content_4 }} {{ end }}
+                          <br>
+                          <a class="btn btn-outline-danger mt-6" href="/mail">&xrarr; {{ with .Site.GetPage "section" "secondary" }} {{ .Params.Button5 }} {{ end }}  </a>
+                      </p>
+                    </div>
+                 
+                  </div>
+                </div>
+         <!-- ================-- Secondary of products --============================-->    
+                <div class="container">
+                    <div  class="row mt-2 ml-auto">
+                        <div class="col-sm-6 col-lg-4 pr-sm-5" data-zanim-timeline='{"delay":0}' data-zanim-trigger="scroll">
+                          <div class="media text-sans-serif">
+                            <span class="mr-3 fs-3 far fa-share-square" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
+                            <div class="media-body overflow-hidden">
+                              <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Title1 }} {{ end }}</h6>
+                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                                  {{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Content1 }} {{ end }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <div class="col-sm-6 col-lg-4 pr-sm-5 mt-4 mt-sm-0" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+                          <div class="media text-sans-serif">
+                            <span class="mr-3 fs-3 far fa-map" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
+                            <div class="media-body overflow-hidden">
+                              <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Title2 }} {{ end }}</h6>
+                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                                  {{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Content2 }} {{ end }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="col-sm-6 col-lg-4 pr-sm-5 mt-4 mt-lg-0" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
+                          <div class="media text-sans-serif"><span class="mr-3 fs-3 far fa-check-square" 
+                            data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
+                            <div class="media-body overflow-hidden">
+                              <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Title3 }} {{ end }}</h6>
+                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                                  {{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Content3 }} {{ end }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="col-sm-6 col-lg-4 pr-sm-5 mt-4" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
+                          <div class="media text-sans-serif">
+                            <span class="mr-3 fs-3 far fa-chart-bar" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
+                            <div class="media-body overflow-hidden">
+                              <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Title4 }} {{ end }}</h6>
+                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                                  {{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Content4 }} {{ end }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="col-sm-6 col-lg-4 pr-sm-5 mt-4" data-zanim-timeline='{"delay":0.4}' data-zanim-trigger="scroll">
+                          <div class="media text-sans-serif">
+                            <span class="mr-3 fs-3 far fa-object-ungroup" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
+                            <div class="media-body overflow-hidden">
+                              <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Title5 }} {{ end }}</h6>
+                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                                  {{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Content5 }} {{ end }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="col-sm-6 col-lg-4 pr-sm-5 mt-4" data-zanim-timeline='{"delay":0.5}' data-zanim-trigger="scroll">
+                          <div class="media text-sans-serif">
+                            <span class="mr-3 fs-3 far fa-envelope-open" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
+                            <div class="media-body overflow-hidden">
+                              <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Title6 }} {{ end }}</h6>
+                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                                  {{ with .Site.GetPage "section" "secondary"  }} {{ .Params.Content_6 }} {{ end }}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 text-center mt-6 "  id="ourstory">
+                          <a class="btn btn-danger" href="#digital-contact"><span class="fas fa-paper-plane mr-3" data-fa-transform="grow-8"></span> {{ with .Site.GetPage "section" "secondary" }} {{ .Params.Button }} {{ end }}</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+                <!-- end of .container-->
+        
+              </section>
