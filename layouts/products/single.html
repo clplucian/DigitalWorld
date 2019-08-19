@@ -4,77 +4,32 @@
             <div class="bg-products p-0" id="top">
                 <div class="row justify-content-center p-8">
                     <div class="col-sm bg-custom rounded p-3">
-                            <h2 class="display-4 text-warning p-8 parallax">{{ .Title }}</h2>
+                        <h2 class="display-4 text-warning p-8 parallax">{{ .Title }}</h2>
                         <div class="container">
                             <div class="row justify-content-center ">
                                 <div class="">
-                                    <img src='{{ with .Site.GetPage "section" "blog1" }} {{ .Params.Image }} {{ end }}' width="600" alt="BlogImage" class="img-fluid" 
-                                    data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"/>
+                                <img src='{{ with .Site.GetPage "section" "blog1" }} {{ .Params.Image }} {{ end }}' width="600" alt="BlogImage" class="img-fluid" 
+                                data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"/>
                                 </div>
                             </div>
                         </div>
                         <br>
-                        <section class="py-0">
-                            <div class="container-fluid">
-                            <div class="row align-items-center py-6 py-md-8 py-lg-0">
-                                <div class="col-lg-4 px-lg-5">
-                                <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-                                    <img class="mr-3 bg-light border rounded"  src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image1 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
-                                    <div class="media-body">
-                                    <div class="overflow-hidden">
-                                        <h4 class=" text-warning" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "products" }} {{ .Params.Title }} {{ end }}</h4>
-                                    </div>
-                                    <div class="overflow-hidden">
-                                        <p class="mb-0 text-white" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "products" }} {{ .Params.Content }} {{ end }}</p>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="col-lg-4 px-lg-5 border-lg-left border-lg-right border-300 py-4 py-md-7">
-                                <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
-                                    <img class="mr-3 bg-light border rounded" src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image2 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
-                                    <div class="media-body">
-                                    <div class="overflow-hidden">
-                                        <h4 class=" text-warning" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "products" }} {{ .Params.Title }} {{ end }}</h4>
-                                    </div>
-                                    <div class="overflow-hidden">
-                                        <p class="mb-0 text-white" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "products" }} {{ .Params.Content }} {{ end }}</p>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="col-lg-4 px-lg-5">
-                                <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
-                                    <img class="mr-3 bg-light border rounded" src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image3 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
-                                    <div class="media-body">
-                                    <div class="overflow-hidden">
-                                        <h4 class=" text-warning"  data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "products" }} {{ .Params.Title }} {{ end }}</h4>
-                                    </div>
-                                    <div class="overflow-hidden">
-                                        <p class="mb-0 text-white" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "products" }} {{ .Params.Content }} {{ end }}</p>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <!-- end of .container-->
-                        </section>
+
+                        {{ partial "article_content" . }}
+
                         <div class="container">
-                            <div class="row">
-                                 <a class="btn btn-outline-danger mt-6" href="/#digital-contact">&xrarr; Contact Us!  </a>
+                            <div class="row justify-content-center">
+                                <a class="text-danger" href="/products">&xlarr; Back to products</a>
                             </div>
                         </div>
                         <div class="container">
-                                <div class="row justify-content-center">
-                                    <a class="text-danger" href="/products"><i class="fa fa-angle-double-left text-danger"></i>Back to products</a>
-                                </div>
+                            <div class="row">
+                             <a class="btn btn-outline-danger mt-6" href="/#digital-contact">&xrarr; Contact Us!  </a>
                             </div>
-                       
-                      
                         </div>
                     </div>
                 </div>
+            </div>
 
 
 {{ partial "footer" . }}

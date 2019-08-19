@@ -1,9 +1,8 @@
 ---
 title: "Cloud"
-date: 2019-08-16T17:44:11+03:00
+date: 2019-08-19T10:48:34+03:00
 draft: true
-image: "/img/cloud_logo.png"
-button: "see more"
+button: "See more about Cloud"
 ---
 
 <span style="color:white;">

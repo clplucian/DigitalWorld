@@ -11,15 +11,18 @@
                     </div>
                 </div>
                 <div class="container bg-custom mt-5">
+
                     {{ range ( where .Site.RegularPages "Section" "products").ByDate.Reverse }}
+
                     <div class="row justify-content-center pt-4">
                         <h3 class="text-warning">{{ .Title }}</h3>
                     </div>
                     <div class="container p-5">
                         <div class="row">
-                            <p class="display-4 text-100">{{ with .Site.GetPage "section" "about_design" }} {{ .Params.Content }} {{ end }}</p>
+                            <p class="display-4 text-100">{{ .Content }}</p>
                         </div>
                     </div>
+
                     {{ end }}
                 </div>
             </div>
