@@ -13,3 +13,4 @@ node {
             sh 'docker push hub.usrp.ro/ms-hugo:latest'
         }
     }
+}
