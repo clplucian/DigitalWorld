@@ -9,20 +9,19 @@
 
             {{ range first 10 ( where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
                 <div class="col-sm-6 pb-4">
-                    <div class="card text-white">
+                    <div class="card text-white" style="height: 100%">
                         <div class="card-body bg-dark">
                             <h4 class="card-title text-white">{{ .Title }}</h4>
                             <img src="{{ .Params.Image }}" height="250" class="card-img-top" alt="Img BLOG !">
                             <h5 class="card-title text-white pt-2">{{ .Date }}</h5>
-                            <p class="card-text">{{ truncate 200 .Content }}</p>
+                            <p class="card-text">{{ .Summary }}</p>
                             <a href="{{ .Permalink }}" class="btn btn-danger rounded-pill">Read More</a>
                         </div>
                     </div>
                 </div>
             {{ end }}
-
-            <a href="/blog" class="btn btn-danger rounded-pill">Read All Posts</a>
         </div>
+        <a href="/blog" class="btn btn-danger rounded-pill">Read All Posts</a>
     </div>
     <!-- end of .container-->
 </section>
