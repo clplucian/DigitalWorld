@@ -1,10 +1,9 @@
 node {
     def srvc
-    git url: 'https://github.com/usrpro/go-hugo.git'
-   /* stages {
+    stages {
         stage("Clone repository") {
             checkout scm
-        } */
+        }
         stage("Build image") {
             sh 'docker build -t img .'
         }
