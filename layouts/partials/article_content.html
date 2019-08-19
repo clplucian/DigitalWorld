@@ -1,0 +1,52 @@
+<section class="py-0">
+    <div class="container-fluid">
+    <div class="row align-items-center py-6 py-md-8 py-lg-0">
+
+        
+        <div class="col-lg-4 px-lg-5">
+        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+            <img class="mr-3 bg-light border rounded"  src='{{ with .Site.GetPage "section" "section1" }} {{ .Params.Image }} {{ end }}' alt="Image" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
+            <div class="media-body">
+            <div class="overflow-hidden">
+                <h4 class=" text-warning" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'> {{ with .Site.GetPage "page" "section1" }} {{.Title }} {{ end }}</h4>
+            </div>
+            <div class="overflow-hidden">
+                <p class="mb-0 text-white" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "page" "section1" }} {{ truncate 200 .Content }} {{ end }}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4 px-lg-5 border-lg-left border-lg-right border-300 py-4 py-md-7">
+        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
+            <img class="mr-3 bg-light border rounded" src='{{ with .Site.GetPage "section" "section2" }} {{ .Params.Image }} {{ end }}' alt="Image" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
+            <div class="media-body">
+            <div class="overflow-hidden">
+                <h4 class=" text-warning" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "page" "section2" }} {{ .Title }} {{ end }}</h4>
+            </div>
+            <div class="overflow-hidden">
+                <p class="mb-0 text-white" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "section2" }} {{ truncate 200 .Content }} {{ end }}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-4 px-lg-5">
+        <div class="media text-sans-serif overflow-hidden" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
+            <img class="mr-3 bg-light border rounded" src='{{ with .Site.GetPage "section" "section3" }} {{ .Params.Image }} {{ end }}' alt="Image" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
+            <div class="media-body">
+            <div class="overflow-hidden">
+                <h4 class=" text-warning"  data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "section3" }} {{ .Title }} {{ end }}</h4>
+            </div>
+            <div class="overflow-hidden">
+                <p class="mb-0 text-white" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "section3" }} {{ truncate 200 .Content }} {{ end }}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        {{ with .Site.GetPage "section" "table" }} {{.Content }} {{ end }}
+        
+
+    </div>
+    </div>
+    <!-- end of .container-->
+</section>
