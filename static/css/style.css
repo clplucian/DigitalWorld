@@ -39,7 +39,17 @@ padding: 0;
     margin-bottom: 0;
     
 }
+.bg-portofolio{
 
+    position: relative;
+    top:0;
+    width: 100%;
+    height: auto;
+    background: url('/img/bg-portofolio.png') no-repeat center center fixed;
+    background-size: cover;
+    margin-bottom: 0;
+    
+}
 
 .bg-products {
 
@@ -85,4 +95,26 @@ padding: 0;
 
 .bg-custom{
 background-color:  rgba(0, 0, 0, 0.472);
+}
+
+
+.carousel-caption{
+    top:200px;
+}
+.carousel-item {
+    height: 50vh;
+    min-width: auto;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/*---Firefox Bug Fix --*/
+.carousel-item {
+transition: -webkit-transform 0.5s ease;
+transition: transform 0.5s ease;
+transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+-webkit-backface-visibility: visible;
+        backface-visibility: visible;
 }

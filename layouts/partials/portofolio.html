@@ -1,27 +1,32 @@
-<section class="container-fluid border-top border-bottom border-300 bg-light pb-5" id="portofolio">
-    <div class="container">
-        <div class="row">
-            <div class="container">
-                <h3 class="display-4">{{ with .Site.GetPage "section" "portofolio" }}{{ .Title }}{{ end }}</h3>
-                <p class="display-5 text-muted">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</p>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    {{ range first 4 ( where .Site.RegularPages "Section" "portofolio").ByDate.Reverse }}
-                        <div class="container text-left col-md-3">
-                           <a href="{{ .Permalink }}"><img src="{{ .Params.Image }}" alt="IMG" class="img-thumbnail shadow p-1 mb-2 bg-white rounded"></a> 
-                            <h4>{{ .Title }}</h4>
-                            <div class="row">
-                                <p>{{ truncate 100 .Content }}</p>
-                            </div>
-                            <a href="{{ .Permalink }}" class="btn btn-danger rounded-pill mt-2 shadow ">See More</a>
+            <section class="container-fluid border-top border-bottom border-300 bg-light pb-5" id="portofolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="container">
+                            <h3 class="display-4">{{ with .Site.GetPage "section" "portofolio" }}{{ .Title }}{{ end }}</h3>
+                            <p class="display-5 text-muted">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</p>
                         </div>
-                    {{ end }}
-                </div>
-                <a class="btn btn-outline-danger mt-6" href="/portofolio">&xrarr; Our Portofolio </a>
-            </div>
+                        <div class="container">
+                        <div class="row">
+                            {{ range first 4 ( where .Site.RegularPages "Section" "portofolio").ByDate.Reverse }}
+                            <div class="container text-left col-md-3">
+                                <div class="container">
+                                    <a href="{{ .Permalink }}"><img src="{{ .Params.Image }}" alt="IMG" class="img-thumbnail shadow p-1 mb-2 bg-white rounded img-fluid"></a> 
+                                    <h4>{{ .Title }}</h4>
+                                </div>
+                                <div class="container" >
+                                    <p>{{ truncate 100 .Content }}</p>
+                                </div>
+                                <div class="row">
+                                </div>
+                                <div class="container bg-custom pb-2">
+                                <a href="{{ .Permalink }}" class="btn btn-danger mt-2 shadow rounded-pill">Read More</a>
+                                </div>
+                                </div>
+                            {{ end }}
+                            </div>
+                            <a class="btn btn-outline-danger mt-6" href="/portofolio">&xrarr; Our Portofolio </a>
+                        </div>
 
-        </div>
-    </div>
-</section>
+                    </div>
+                </div>
+            </section>

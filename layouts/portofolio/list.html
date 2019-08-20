@@ -1,11 +1,38 @@
-{{ partial "menu" .}}
-<div>
-    <h2>{{ .Title }}</h2>
-    <p>{{ .Content }}</p>
+{{  partial "header" . }}
+ {{ partial "navbar" . }}
 
-    <br>
-    {{ range .Pages }}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <br>
-    {{ end }}
-</div>
+        <div class="bg-portofolio">
+            <div class="container pt-8">
+                <div class="row">
+                    <div class="container ml-auto">
+                        <h3 class="display-4 text-100">{{ with .Site.GetPage "section" "portofolio" }}{{ .Title }}{{ end }}</h3>
+                        <p class="display-5 text-100">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</p>
+                    </div>
+
+                    {{ range first 6 ( where .Site.RegularPages "Section" "portofolio").ByDate.Reverse }}
+                    <div class="col-sm-3 pb-4">
+                        <div class="card text-white bg-custom" style="height: 100%;">
+                            <div class="conatiner bg-custom pb-0 mb-0">
+                                <a href="{{ .Permalink }}">
+                                    <h4 class="bg-custom text-white p-2 m-0">{{ .Title }}</h4>
+                                </a>
+                            </div>
+                            <div class="card-body bg-custom p-2">
+                                <a href=" {{ .Permalink }}">
+                                 <img src="{{ .Params.Image }}" class="img-thumbnail p-0" alt="Img BLOG !">
+                                </a>
+                                <div class="container p-2">
+                                    <p class="card-text">{{ truncate 100 .Content }}</p>
+                                </div>
+                            </div>
+                            <div class="container bg-custom pb-2">
+                                <a href="{{ .Permalink }}" class="btn btn-danger rounded-pill">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+                
+{{ partial "footer" . }}
