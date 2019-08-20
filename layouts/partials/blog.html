@@ -17,15 +17,15 @@
                             <img src="{{ .Params.Image }}" height="250" class="card-img-top" alt="Img BLOG !">
                             <h5 class="card-title text-white pt-2">{{ .Date.Format "1 Jan 2006 15:04" }}</h5>
                             <div class="container p-2">
-                                <p class="card-text">{{ truncate 200 .Content }}</p>
+                                <p class="card-text">{{ .Summary }}</p>
                             </div>
                             <a href="{{ .Permalink }}" class="btn btn-danger rounded-pill">Read More</a>
                         </div>
                     </div>
                 </div>
             {{ end }}
-            <a href="/blog" class="btn btn-danger rounded-pill ml-3">Read All Posts</a>
         </div>
+        <a href="/blog" class="btn btn-danger rounded-pill ml-3">Read All Posts</a>
     </div>
     <!-- end of .container-->
 </section>
