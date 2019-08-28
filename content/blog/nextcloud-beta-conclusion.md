@@ -2,7 +2,7 @@
 title: "Nextcloud Beta Conclusion"
 date: 2019-08-19T12:10:29+03:00
 draft: true
-image: "/img/blog/nextcloud-logo-background.png"
+image: "/img/blog/nextcloud-logo-white-transparent.png"
 ---
 Nextcloud seems to become more and more popular for backup management, around the world. Since years they've provided the community with an open source cloud storage server and client applications that work on Windows, Mac, Linux, iOS and Android. Not many vendors, including proprietary ones, can say to deliver such a consistent product.
 <!--more-->

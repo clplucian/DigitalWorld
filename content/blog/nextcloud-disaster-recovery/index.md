@@ -7,9 +7,9 @@ image: "/img/blog/nextcloud-mv-screenshot.png"
 Synchronizing an app data directory, *containing thousands of files*, with Nextcloud: What happens in case of a partial and corrupted data set? How we helped our client getting their data back!
 <!--more-->
 
-{{< figure src="nextcloud-versions-dialog.png" title="Nextcloud Versions Dialog" class="float-right">}}
-
 ## The "disaster"
+
+{{< figure src="nextcloud-versions-dialog.png" title="Nextcloud Versions Dialog" class="float-right" width="200px">}}
 
 A Windows Server had accountancy software and its data files stored on shared volume. These are thousands of small files, modified on a regular base. The shared volume was synchronized with a Nextcloud server, using the client app. Two things happened, 7 days apart:
 
@@ -25,39 +25,85 @@ Now we had to restore all the files to a point that the application's data would
 All files on the Nextcloud server are written somewhere on disk, following a specific hierarchy. It looks something like this:
 
 ````
-/html/data/<user>
-files
-Transfer
-             0007
-....
-     0066
-     clona
-     FreeTab
-     salv_bd
-                                                                                               files_external
-09.02.2017.d1553114660
-SAGA C.3.0
-31.01.2017 ps.d1553110688
-SAGA PS.3.0
-keys
-versions
-SITUATIE LUNARA.d1558312066
-   Lots of other stuff....
-saga-backup
-SAGA C.3.0
-     0008
-     0062
-     clona
-     salv_bd
-SAGA PS.3.0
-0001
-0002
-....
-0020
-Actualizari
-clona
-FreeTab
-2756086713
+tree /html/data/<user>
+├── cache
+├── files
+│   └── saga-backup
+│       ├── Export Saga
+│       │   ├── 000037KP00AE.CDX
+│       │   ├── 000082E102HW.CDX
+│       │   ├── 000082E102I9.CDX
+│       │   └── ....
+│       ├── SAGA C.3.0
+│       │   ├── 0007
+│       │   │   ├── a3b.cdx
+│       │   │   ├── a3b.dbf
+│       │   │   ├── alarme.cdx
+│       │   │   └── ....
+│       │   ├── 0008
+│       │   ├── ....
+│       │   └── XZip.dll
+│       └── SAGA PS.3.0
+│           ├── 0001
+│           │   ├── a3b.cdx
+│           │   ├── a3b.dbf
+│           │   ├── AL
+│           │   │   ├── apartament.cdx
+│           │   │   └── ....
+│           │   └── ....
+│           ├── 0002
+│           ├── ....
+│           └── XZip.dll
+├── files_external
+│   └── ....
+├── files_trashbin
+│   ├── files
+│   │   ├── 0002-sigla.sgl.d1557125841
+│   │   ├── 0003-sigla.sgl.d1557125841
+│   │   ├── acme ltd.d1557125633
+│   │   │   └── SH00091005271.pdf
+│   │   ├── ....
+│   │   └── xls-1607-122539.xls.d1555691728
+│   ├── keys
+│   └── versions
+│       ├── bon_det.dbf.v1550591652.d1552668954
+│       ├── bon_det.dbf.v1550591708.d1557125508
+│       └── ....
+├── files_versions
+│   └── saga-backup
+│       ├── Export Saga
+│       │   ├── DU
+│       │   └── INVENTAR
+│       ├── SAGA C.3.0
+│       │   ├── 0007
+│       │   │   ├── a3b.cdx.v1550591545
+│       │   │   ├── a3b.cdx.v1555658113
+│       │   │   ├── a3b.dbf.v1550591545
+│       │   │   ├── a3b.dbf.v1555658113
+│       │   │   ├── alarme.cdx.v1550591545
+│       │   │   └── ....
+│       │   ├── 0008
+│       │   ├── ....
+│       │   ├── VFP9Rerr.log.v1557230030
+│       │   └── VFP9Rerr.log.v1558551527
+│       └── SAGA PS.3.0
+│           ├── 0001
+│           │   ├── a3b.cdx.v1550668674
+│           │   ├── a3b.cdx.v1555658614
+│           │   ├── a3b.dbf.v1550668674
+│           │   ├── a3b.dbf.v1555658614
+│           │   ├── AL
+│           │   │   ├── apartament.cdx.v1550668675
+│           │   │   ├── apartament.cdx.v1555658614
+│           │   │   ├── apartament.dbf.v1550668675
+│           │   │   ├── apartament.dbf.v1555658614
+│           │   │   └── ....
+│           │   └── ....
+│           ├── 0002
+│           ├── ....
+│           └── VFP9Rerr.log.v1544186973
+└── uploads
+    └── ....
 
 10484 directories, 457016 files
 ````
