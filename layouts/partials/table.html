@@ -1,0 +1,22 @@
+<div class="container mt-6">
+        <div class="row">
+            <table class="table" style="color:white; ">
+                <thead>
+                    <tr>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .Params.Testing }}
+                        <tr>
+                            {{ range . }}
+                            <td>{{ . }}</td>
+                            {{ end }}
+                        </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+    </div>

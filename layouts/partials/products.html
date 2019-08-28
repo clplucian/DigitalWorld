@@ -1,10 +1,11 @@
+
 <section class="text-center text-sans-serif" id="products">
         <!-- ================-- Products Section (Title and Subtitle) --============================-->
                 <div class="container">
                   <div class="row justify-content-center">
                     <div class="col-lg-9">
                       <h6 class="lead mb-0" style="font-size:1.5em;">{{ with .Site.GetPage "section" "products" }} {{ .Title }} {{ end }}</h6>
-                      <p>{{ with .Site.GetPage "section" "products" }} {{ .Content }} {{ end }}</p>
+                      {{ with .Site.GetPage "section" "products" }} {{ .Content }} {{ end }}
                     </div>
                   </div>
         
@@ -12,10 +13,10 @@
                   <div class="row mt-6">
                       <div class="col-sm-6 col-lg-3 mb-4" style="height:100%">
                           <div class="bg-dark pb-4 text-center shadow">
-                            <img class="img-fluid p-5" src='{{ with .Site.GetPage "section" "about_design" }} {{ .Params.Image }} {{ end }}' width="222" alt="WebDesign" 
+                            <img class="img-fluid p-5" src='{{ with .Site.GetPage "section" "design" }} {{ .Params.Image }} {{ end }}' width="222" alt="WebDesign" 
                               data-zanim-xs='{"delay":0.3,"animation":"zoom-in"}' data-zanim-trigger="scroll" />
-                            <h5 class="text-white">{{ with .Site.GetPage "page" "about_design" }} {{ .Title }} {{ end }}</h5>
-                            <button class="btn btn-danger" id="button-design">{{ with .Site.GetPage "section" "about_design" }} {{ .Params.Button }} {{ end }}</button>
+                            <h5 class="text-white">{{ with .Site.GetPage "section" "design" }} {{ .Title }} {{ end }}</h5>
+                            <button class="btn btn-danger" id="button-design">{{ with .Site.GetPage "page" "design" }} {{ .Params.Button }} {{ end }}</button>
                           </div>
                         </div>
         <!-- ================-- WebApplication --============================-->
@@ -49,45 +50,45 @@
          <!-- ================-- Small Descripton of products --============================-->         
                     <div class="row justify-content-center">
                       <div class="col-lg-8" style="display: none;" id="info-design">
-                        <h2>{{ with .Site.GetPage "page" "web_design2" }} {{ .Title }} {{ end }}</h2>
+                        <h2>{{ with .Site.GetPage "page" "design" }} {{ .Title }} {{ end }}</h2>
                         <div class="p-5 bg-dark rounded text-white shadow">
                             <p class=" ">
-                                {{ with .Site.GetPage "page" "web_design2" }} {{ .Content }} {{ end }}
+                                {{ with .Site.GetPage "page" "design" }} {{ .Summary }} {{ end }}
                                   <br>
-                                  <a class="btn btn-outline-danger mt-6" href="/products/about_design/">&xrarr; {{ with .Site.GetPage "section" "web_design2" }} {{ .Params.button }} {{ end }}  </a>
+                                  <a class="btn btn-outline-danger mt-6" href='{{ with .Site.GetPage "page" "design" }} {{ .Permalink }} {{ end }}'>&xrarr; {{ with .Site.GetPage "section" "design" }} {{ .Params.button }} {{ end }}  </a>
                               </p>
                         </div>
                       </div>
                       
                     <div class="col-lg-8" style="display: none;" id="info-hosting">
-                        <h2>{{ with .Site.GetPage "section" "web_application2" }} {{ .Title }} {{ end }}</h2>
+                        <h2>{{ with .Site.GetPage "page" "web_application" }} {{ .Title }} {{ end }}</h2>
                         <div class="p-5 bg-dark rounded text-white shadow">
                             <p class=" ">
-                                {{ with .Site.GetPage "page" "web_application2" }} {{ .Content }} {{ end }}
+                                {{ with .Site.GetPage "page" "web_application" }} {{ .Summary }} {{ end }}
                                   <br>
-                                  <a class="btn btn-outline-danger mt-4" href="/products/about_design/">&xrarr; {{ with .Site.GetPage "section" "web_application2" }} {{ .Params.Button }} {{ end }}  </a>
+                                  <a class="btn btn-outline-danger mt-4" href='{{ with .Site.GetPage "page" "web_application" }} {{ .Permalink }} {{ end }}'>&xrarr; {{ with .Site.GetPage "section" "web_application" }} {{ .Params.Button }} {{ end }}  </a>
                               </p>
                         </div>
                       </div> 
         
                     <div class="col-lg-8" style="display: none;" id="info-cloud">
-                      <h2>{{ with .Site.GetPage "section" "cloud2" }} {{ .Title }} {{ end }}</h2>
+                      <h2>{{ with .Site.GetPage "page" "cloud" }} {{ .Title }} {{ end }}</h2>
                       <div class="p-5 bg-dark rounded text-white shadow">
                           <p class=" ">
-                              {{ with .Site.GetPage "page" "cloud2" }} {{ .Content }} {{ end }}
+                              {{ with .Site.GetPage "page" "cloud" }} {{ .Summary }} {{ end }}
                                 <br>
-                                <a class="btn btn-outline-danger mt-4" href="/products/about_design/">&xrarr; {{ with .Site.GetPage "section" "cloud2" }} {{ .Params.Button }} {{ end }}  </a>
+                                <a class="btn btn-outline-danger mt-4" href='{{ with .Site.GetPage "page" "cloud" }} {{ .Permalink }} {{ end }}'>&xrarr; {{ with .Site.GetPage "page" "cloud" }} {{ .Params.Button }} {{ end }}  </a>
                             </p>
                       </div>
                     </div>
         
                     <div class="col-lg-8" style="display: none;" id="info-mail">
-                      <h2>{{ with .Site.GetPage "section" "mail2" }} {{ .Title }} {{ end }}</h2>
+                      <h2>{{ with .Site.GetPage "page" "mail" }} {{ .Title }} {{ end }}</h2>
                       <div class="p-5 bg-dark rounded text-white shadow">
                           <p class=" ">
-                              {{ with .Site.GetPage "page" "mail2" }} {{ .Content }} {{ end }}
+                              {{ with .Site.GetPage "page" "mail" }} {{ .Summary }} {{ end }}
                                 <br>
-                                <a class="btn btn-outline-danger mt-4" href="/products/about_design/">&xrarr; {{ with .Site.GetPage "section" "mail2" }} {{ .Params.Button }} {{ end }}  </a>
+                                <a class="btn btn-outline-danger mt-4" href='{{ with .Site.GetPage "page" "mail" }} {{ .Permalink }} {{ end }}'>&xrarr; {{ with .Site.GetPage "page" "mail" }} {{ .Params.Button }} {{ end }}  </a>
                             </p>
                       </div>
                   </div>
@@ -100,9 +101,9 @@
                             <span class="mr-3 fs-3 far fa-share-square" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
                             <div class="media-body overflow-hidden">
                               <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "page" "detail1"  }} {{ .Title }} {{ end }}</h6>
-                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                              <div data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
                                   {{ with .Site.GetPage "section" "detail1"  }} {{ .Content }} {{ end }}
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -112,9 +113,9 @@
                             <span class="mr-3 fs-3 far fa-map" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
                             <div class="media-body overflow-hidden">
                               <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "page" "detail2"  }} {{ .Title }} {{ end }}</h6>
-                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                              <div data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
                                   {{ with .Site.GetPage "section" "detail2"  }} {{ .Content }} {{ end }}
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -124,9 +125,9 @@
                             data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
                             <div class="media-body overflow-hidden">
                               <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "page" "detail3"  }} {{ .Title }} {{ end }}</h6>
-                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                              <div data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
                                   {{ with .Site.GetPage "section" "detail3"  }} {{ .Content }} {{ end }}
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -136,9 +137,9 @@
                             <span class="mr-3 fs-3 far fa-chart-bar" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
                             <div class="media-body overflow-hidden">
                               <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "detail4"  }} {{ .Title }} {{ end }}</h6>
-                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                              <div data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
                                   {{ with .Site.GetPage "section" "detail4"  }} {{ .Content }} {{ end }}
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -148,9 +149,9 @@
                             <span class="mr-3 fs-3 far fa-object-ungroup" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
                             <div class="media-body overflow-hidden">
                               <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "detail5"  }} {{ .Title }} {{ end }}</h6>
-                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                              <div data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
                                   {{ with .Site.GetPage "section" "detail5"  }} {{ .Content }} {{ end }}
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -160,9 +161,9 @@
                             <span class="mr-3 fs-3 far fa-envelope-open" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'></span>
                             <div class="media-body overflow-hidden">
                               <h6 class="ls text-uppercase" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "detail6"  }} {{ .Title }} {{ end }}</h6>
-                              <p data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
+                              <div data-zanim-xs='{"delay":0.3,"animation":"slide-right"}'>
                                   {{ with .Site.GetPage "section" "detail6"  }} {{ .Content }} {{ end }}
-                              </p>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -175,3 +176,4 @@
                 <!-- end of .container-->
         
               </section>
+
