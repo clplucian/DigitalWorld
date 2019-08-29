@@ -1,9 +1,10 @@
-            <section class="container-fluid border-top border-bottom border-300 bg-light pb-5" id="portofolio">
+
+<section class="container-fluid border-top border-bottom border-300 bg-light pb-5" id="portofolio">
                 <div class="container">
                     <div class="row">
                         <div class="container">
-                            <h3 class="display-4">{{ with .Site.GetPage "section" "portofolio" }}{{ .Title }}{{ end }}</h3>
-                            <p class="display-5 text-muted">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</p>
+                            <h3 class="display-4 text-black">{{ with .Site.GetPage "section" "portofolio" }}{{ .Title }}{{ end }}</h3>
+                            <div class="display-5 text-muted">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</div>
                         </div>
                         <div class="container">
                         <div class="row">
@@ -18,13 +19,13 @@
                                 </div>
                                 <div class="row">
                                 </div>
-                                <div class="container bg-custom pb-2">
+                                <div class="container pb-2">
                                 <a href="{{ .Permalink }}" class="btn btn-danger mt-2 shadow rounded-pill">Read More</a>
                                 </div>
                                 </div>
                             {{ end }}
                             </div>
-                            <a class="btn btn-outline-danger mt-6" href="/portofolio">&xrarr; Our Portofolio </a>
+                            <a class="btn btn-outline-danger  mt-6" href="/portofolio">&xrarr; Our Portofolio </a>
                         </div>
 
                     </div>

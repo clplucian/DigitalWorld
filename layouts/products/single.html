@@ -1,30 +1,31 @@
-{{  partial "header" . }}
+{{  partial "head" . }}
  {{ partial "navbar" . }}
    
             <div class="bg-products p-0" id="top">
-                <div class="row justify-content-center p-8">
-                    <div class="col-sm bg-custom rounded p-3">
+                <div class="row justify-content-center">
+                    <div class="col-sm bg-custom rounded ">
                         <h2 class="display-4 text-warning p-8 parallax">{{ .Title }}</h2>
-                        <div class="container">
-                            <div class="row justify-content-center ">
-                                <div class="">
-                                <img src='{{ with .Site.GetPage "section" "blog1" }} {{ .Params.Image }} {{ end }}' width="600" alt="BlogImage" class="img-fluid" 
-                                data-zanim-xs='{"delay":0.1,"animation":"zoom-in"}' data-zanim-trigger="scroll"/>
-                                </div>
+                            <div class="container">
+                                {{ partial "cards_slider" . }}
                             </div>
-                        </div>
                         <br>
-
-                        {{ partial "article_content" . }}
+                        <br>
+                        
+                        <div class="container">
+                                {{ .Content }}
+                        </div>
+                        <div class="conatiner">
+                                {{ partial "table" . }}
+                        </div>
 
                         <div class="container">
                             <div class="row justify-content-center">
-                                <a class="text-danger" href="/products">&xlarr; Back to products</a>
+                                <a class="text-danger" href="/products">&xlarr; Back to products </a>
                             </div>
                         </div>
                         <div class="container">
-                            <div class="row">
-                             <a class="btn btn-outline-danger mt-6" href="/#digital-contact">&xrarr; Contact Us!  </a>
+                            <div class="row justify-content-center">
+                                  <a class="btn btn-outline-danger mt-2 mb-5" href="/#digital-contact">&xrarr; Contact Us!  </a>
                             </div>
                         </div>
                     </div>

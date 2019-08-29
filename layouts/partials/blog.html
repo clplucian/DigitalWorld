@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="container ml-auto">
-                <h3 class="display-4">{{ with .Site.GetPage "section" "blog" }}{{ .Title }}{{ end }}</h3>
-                <p class="display-5 text-muted">{{ with .Site.GetPage "section" "blog" }}{{ .Content }}{{ end }}</p>
+                <h3 class="display-4 text-black">{{ with .Site.GetPage "section" "blog" }}{{ .Title }}{{ end }}</h3>
+                <div class="display-5 text-black">{{ with .Site.GetPage "section" "blog" }}{{ .Content }}{{ end }}</div>
             </div>
 
             {{ range first 4 ( where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
