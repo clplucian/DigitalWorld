@@ -1,11 +1,11 @@
- {{  partial "header" . }}
-    {{ partial "secondary_navbar" . }}
+ {{  partial "head" . }}
+    {{ partial "navbar" . }}
         <div class="bg-site p-0" id="top">
             <div class="conatiner col-sm">
             <div class="row justify-content-center pt-6">
                 <div class="col-lg-10 bg-dark mt-5 shadow rounded p-3">
                     <div class="container">
-                        <h1 class="text-white p-6">{{ .Title }}</h1>
+                        <h1 class="text-white text-center pb-4 pt-4 mobile-text">{{ .Title }}</h1>
                     </div>
                     <div class="container">
                         <div class="row">
@@ -18,7 +18,7 @@
                     <div class="container">
                         <p class="text-white">{{ .Date.Format "1 Jan 2006 15:04" }}</p>
                     </div>
-                    <div class="container text-white p-4">
+                    <div class="container text-white">
                             <p>{{ .Content }}</p>
                         </div>
                         <br>

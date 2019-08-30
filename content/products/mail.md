@@ -3,7 +3,41 @@ title: "Mail"
 date: 2019-08-16T17:44:17+03:00
 draft: true
 image: "/img/mail_logo.png"
+cards:
+    0:
+        title: "Admin console"
+        image: "/img/mailu-user-setting.png"
+        text: "mail Lorem ipsum dolor sit ame"
+        state: "active"
+    1:
+        title: "Antispam"
+        image: "/img/antispam.png"
+        text: "mail Lorem ipsum dolor sit ame"
+        
+    2:
+        title: "Webmail"
+        image: "/img/webmail.png"
+        text: "mail Lorem ipsum dolor sit ame"
+    3:
+        title: "Webmail"
+        image: "/img/webmail.png"
+        text: "mail Lorem ipsum dolor sit ame"
+    4:
+        title: "Webmail"
+        image: "/img/webmail.png"
+        text: "mail Lorem ipsum dolor sit ame"
+    5:
+        title: "Webmail"
+        image: "/img/webmail.png"
+        text: "mail Lorem ipsum dolor sit ame"
+
+image_1: "/img/mailu-user-setting.png"
+image_2: "/img/antispam.png"
+image_3: "/img/webmail.png"
 button: "see more"
+
+testing: [["a", "b", "c"], ["d", "e", "f"], ["x", "y", "z"]]
+
 ---
 Full control over your mail domain. Using our mail servers, you can manage your mail users, aliases (forwards) and filters. Our servers come with anti-spam and anti-virus filtering.
 <!--more-->

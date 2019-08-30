@@ -13,46 +13,11 @@
   * digital_contact     Range of texts
   * digital_socials     5 test fields
 -->
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="application/javascript" src="https://mail-templates.o.auroraobjects.eu/contact-form-ajax.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>MohlmannSolutions | Always with a step forward</title>
 
 
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-   
-    <link rel="manifest" href="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="s">
-    <meta name="theme-color" content="#ffffff">
-
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900" rel="stylesheet">
-    <link href="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/lib/remodal/remodal.css" rel="stylesheet">
-    <link href="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/lib/remodal/remodal-default-theme.css" rel="stylesheet">
-    <link href="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
-    <link href="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/css/theme.css" rel="stylesheet">
-   
-
-  </head>
-
-
+{{ partial "head" . }}
   <body>
+    
    {{ partial "navbar" . }}
 
     <!-- ===============================================-->
@@ -163,7 +128,7 @@
                   <img class="mr-3" src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image1 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
                   <div class="media-body">
                     <div class="overflow-hidden">
-                      <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title1 }} {{ end }}</h4>
+                      <h4 class="text-black" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title1 }} {{ end }}</h4>
                     </div>
                     <div class="overflow-hidden">
                       <p class="mb-0" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Content1 }} {{ end }}</p>
@@ -176,7 +141,7 @@
                   <img class="mr-3" src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image2 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
                   <div class="media-body">
                     <div class="overflow-hidden">
-                      <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title2 }} {{ end }}</h4>
+                      <h4 class="text-black" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title2 }} {{ end }}</h4>
                     </div>
                     <div class="overflow-hidden">
                       <p class="mb-0" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Content2 }} {{ end }}</p>
@@ -189,7 +154,7 @@
                   <img class="mr-3" src='{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Image3 }} {{ end }}' alt="icon" width="50" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' />
                   <div class="media-body">
                     <div class="overflow-hidden">
-                      <h4 data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title3 }} {{ end }}</h4>
+                      <h4 class="text-black" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Title3 }} {{ end }}</h4>
                     </div>
                     <div class="overflow-hidden">
                       <p class="mb-0" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{ with .Site.GetPage "section" "digital_features" }} {{ .Params.Content3 }} {{ end }}</p>
@@ -200,60 +165,60 @@
             </div>
           </div>
           <!-- end of .container-->
-  
-        </section>
-      <!-- <section> begin ============================-->
-          <section class="pt-5 mt-5" id="digital-about">
 
-              <div class="container">
-                <div class="row align-items-center">
-                  <div class="col-md-5">
-                    <img class="img-fluid" src='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Image }} {{ end }}' alt="" />
-                  </div>
-                  <div class="col-md-7 ml-auto">
-                    <h3 class="mb-3"> {{ with .Site.GetPage "section" "digital_info" }} {{ .Title }} {{ end }}</h3>
-                    <div class="text-sans-serif">
-                      {{ with .Site.GetPage "section" "digital_info" }} {{ .Content }} {{ end }}
+              </section>
+              <!-- <section> begin ============================-->
+              <section class="pt-5 mt-5" id="digital-about">
+
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-md-5">
+                      <img class="img-fluid" src='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Image }} {{ end }}' alt="" />
                     </div>
-                    <div class="container">
-                    <div class="row mt-4">
-                      <div class="col-lg-4">
-                        <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa1_icon }} {{ end }}'></span>
-                          <div class="media-body">
-                            <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa1_content }} {{ end }}</h5>
+                    <div class="col-md-7 ml-auto">
+                      <h3 class="mb-3 text-black"> {{ with .Site.GetPage "section" "digital_info" }} {{ .Title }} {{ end }}</h3>
+                      <div class="text-sans-serif">
+                       {{ with .Site.GetPage "section" "digital_info" }} {{ .Content }} {{ end }}
+                      </div>
+                      <div class="container">
+                        <div class="row mt-4">
+                          <div class="col-lg-4">
+                            <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa1_icon }} {{ end }}'></span>
+                              <div class="media-body">
+                                <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa1_content }} {{ end }}</h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                          <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa2_icon }} {{ end }}'></span>
+                            <div class="media-body">
+                              <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa2_content }} {{ end }}</h5>
+                            </div>
+                          </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa3_icon }} {{ end }}'></span>
+                              <div class="media-body">
+                                <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa3_content }} {{ end }}</h5>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa2_icon }} {{ end }}'></span>
-                          <div class="media-body">
-                            <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa2_content }} {{ end }}</h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="media align-items-center mt-3"><span class='{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa3_icon }} {{ end }}'></span>
-                          <div class="media-body">
-                            <h5 class="mb-0 font-weight-bold text-900">{{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Fa3_content }} {{ end }}</h5>
-                          </div>
-                        </div>
-                      </div>
+                      </div> 
+                      <a class="btn btn-outline-danger mt-6" href="/#ourstory">&xrarr; {{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Button }} {{ end }}  </a>
                     </div>
-                   </div> 
-                    <a class="btn btn-outline-danger mt-6" href="/#ourstory">&xrarr; {{ with .Site.GetPage "section" "digital_info" }} {{ .Params.Button }} {{ end }}  </a>
                   </div>
                 </div>
-     
-        <!-- end of .container-->
-      </section>
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
+              <!-- end of .container-->
+              </section>
+              <!-- <section> close ============================-->
+              <!-- ============================================-->
 
 
 
 
       <!-- ============================================-->
-      <!-- PRODUCT begin ============================-->
+      <!-- PRODUCTS begin ============================-->
       {{ partial "products" . }}
 
 
@@ -289,7 +254,7 @@
                   <a class="btn btn-link text-danger font-weight-bold pl-0 mt-4" href="#">{{ with .Site.GetPage "section" "our_story" }} {{.Params.Button1 }}{{end}} &xrarr;</a>
                 </div>
                 <div class="text-sans-serif">
-                  <h3 class="mb-2 font-weight-normal">{{ with .Site.GetPage "section" "our_story" }} {{.Params.Title3 }}{{end}}</span></h3>
+                  <h3 class="mb-2 font-weight-normal"><span>{{ with .Site.GetPage "section" "our_story" }} {{.Params.Title3 }}{{end}}</span></h3>
                   <h6 class="ls text-uppercase font-weight-bold mb-4">{{ with .Site.GetPage "section" "our_story" }} {{.Params.Subtitle3 }}{{end}}}</h6>
                   <p class="mb-0">
                       {{ with .Site.GetPage "section" "our_story" }} {{.Params.Content3 }}{{end}}
@@ -378,17 +343,17 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-3 pr-lg-5">
-              <h3 class="mb-3">{{ with .Site.GetPage "page" "company" }} {{ .Title }} {{ end }}</h3>
-              <p>
+              <h3 class="mb-3 text-black">{{ with .Site.GetPage "page" "company" }} {{ .Title }} {{ end }}</h3>
+              <div>
                 {{ with .Site.GetPage "page" "company" }} {{ .Content }}   {{ end }}
-              </p>
+              </div>
             </div>
             <div class="col-md-6 col-lg-4 pr-lg-6 ml-lg-auto mt-6 mt-lg-0">
-                <h4 class="mb-3"> {{ with .Site.GetPage "page" "info" }} {{ .Title }} {{ end }}</h4>
-              <p class="mb-0">
+                <h4 class="mb-3 text-black"> {{ with .Site.GetPage "page" "info" }} {{ .Title }} {{ end }}</h4>
+              <div class="mb-0">
                 {{ with .Site.GetPage "page" "info" }} {{ .Content }}   {{ end }}
-              </p>
-               <h4 class="mb-3 mt-4">{{ with .Site.GetPage "page" "social" }} {{ .Title }} {{ end }}</h4>
+              </div>
+               <h4 class="mb-3 mt-4 text-black">{{ with .Site.GetPage "page" "social" }} {{ .Title }} {{ end }}</h4>
                 {{ with .Site.GetPage "page" "social" }}  {{ .Content }}  {{ end }}           
               <!--
               <a class="btn btn-dark btn-sm mr-2" href="#"><span class="fab fa-twitter"></span></a>
@@ -397,9 +362,9 @@
             </div>
 
             <div class="col-md-6 col-lg-4 mt-6 mt-lg-0">
-              <h4 class="mb-3">{{ with .Site.GetPage "page" "contact" }} {{ .Title }} {{ end }} </h4>
-              <p class="mb-0"><span class="text-black"></span> {{ with .Site.GetPage "page" "contact" }} {{ .Content }} {{ end }}  </p>
-              <h4 class="mb-3 mt-4">{{ with .Site.GetPage "page" "findus" }} {{ .Title }} {{ end}} </h4>
+              <h4 class="mb-3 text-black">{{ with .Site.GetPage "page" "contact" }} {{ .Title }} {{ end }} </h4>
+              <div class="mb-0"><span class="text-black"></span> {{ with .Site.GetPage "page" "contact" }} {{ .Content }} {{ end }}  </div>
+              <h4 class="mb-3 mt-4 text-black">{{ with .Site.GetPage "page" "findus" }} {{ .Title }} {{ end}} </h4>
                {{ with .Site.GetPage "page"  "findus" }} {{ .Content }} {{ end }}           
             </div>
           </div>
@@ -412,24 +377,3 @@
 
 
     {{ partial "footer" . }}
-
-    
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/js/jquery.min.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/js/popper.min.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/js/bootstrap.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/js/plugins.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/lib/loaders.css/loaders.css.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/js/stickyfill.min.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/lib/remodal/remodal.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/lib/jtap/jquery.tap.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/js/rellax.min.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/lib/owl.carousel/owl.carousel.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/js/theme.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/ajax.js" type="text/javascript"></script>
-    <script src="/js/jquery.vide.js"></script>
-    <script src="https://sparrow-theme.o.auroraobjects.eu/sparrow/assets/render.js" type="text/javascript"></script>
-
-
-  </body>
-
-</html>

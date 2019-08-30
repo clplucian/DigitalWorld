@@ -1,4 +1,4 @@
-{{  partial "header" . }}
+{{  partial "head" . }}
  {{ partial "navbar" . }}
 
         <div class="bg-portofolio">
@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="container ml-auto">
                         <h3 class="display-4 text-100">{{ with .Site.GetPage "section" "portofolio" }}{{ .Title }}{{ end }}</h3>
-                        <p class="display-5 text-100">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</p>
+                        <h5 class="display-5 text-muted">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</h5>
                     </div>
 
                     {{ range first 6 ( where .Site.RegularPages "Section" "portofolio").ByDate.Reverse }}
@@ -22,7 +22,7 @@
                                  <img src="{{ .Params.Image }}" class="img-thumbnail p-0" alt="Img BLOG !">
                                 </a>
                                 <div class="container p-2">
-                                    <p class="card-text">{{ truncate 100 .Content }}</p>
+                                    <p class="card-text">{{ truncate 100 .Summary }}</p>
                                 </div>
                             </div>
                             <div class="container bg-custom pb-2">
