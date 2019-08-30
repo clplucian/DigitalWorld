@@ -39,8 +39,31 @@ button: "see more"
 testing: [["a", "b", "c"], ["d", "e", "f"], ["x", "y", "z"]]
 
 ---
-<span style="color:white;">
-mail Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus iaculis urna id volutpat lacus laoreet non curabitur. Sit amet facilisis magna etiam tempor orci. Sapien eget mi proin sed libero. Nibh sed pulvinar proin gravida. In metus vulputate eu scelerisque felis. Varius duis at consectetur lorem donec massa sapien faucibus et. Eget nulla facilisi etiam dignissim diam quis enim lobortis. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Aliquet nec ullamcorper sit amet risus. Eros donec ac odio tempor orci dapibus ultrices in. Vitae proin sagittis nisl rhoncus. Turpis egestas sed tempus urna et pharetra pharetra. Porta nibh venenatis cras sed felis eget.</span>
+Full control over your mail domain. Using our mail servers, you can manage your mail users, aliases (forwards) and filters. Our servers come with anti-spam and anti-virus filtering.
+<!--more-->
+## You've got mail
+Our mail servers are modern, feature complete and always up to date with the latest security patches. Please read on to discover what we offer in our mail hosting package.
 
-<span style="color:white">
-Ac tincidunt vitae semper quis. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Morbi tristique senectus et netus et malesuada fames. Egestas congue quisque egestas diam in arcu. Neque gravida in fermentum et. A condimentum vitae sapien pellentesque. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Id nibh tortor id aliquet. Malesuada fames ac turpis egestas maecenas pharetra. Morbi tristique senectus et netus. In nibh mauris cursus mattis molestie a. Egestas erat imperdiet sed euismod. Sem nulla pharetra diam sit amet nisl suscipit adipiscing. Tincidunt id aliquet risus feugiat in ante metus dictum at. Nisl condimentum id venenatis a condimentum.</span>
+### Admin console
+Our mail server comes with a admin console. Here you can add / remove users for your domain, define aliases and auto forwards. Users have the ability to change their password and setup an "out of office reply".
+<br/><img src="/img/products/mailu-user-setting.png" width="500px">
+
+### Webmail
+We use "rainloop" webmail. It offers a sleek and simple to use interface. It is simple to understand. And yet it is feature complete, with functions like server-site mail filtering.
+<br/><img src="/img/products/webmail.png" width="500px">
+
+### Mobile
+Our mail servers support *IMAP push* and *SMTP*. THis allows connection to your mobile phone and desktop clients. Push will notify you in real time as new mail arrives. SMTP allows you to send mail from any device.
+
+### Filtering
+Our server have spam and antivirus filters. The spam filter is based on a state of the art self-learning algorithm. Whenever a user moves a message to spam, the spam filter will update its definitions to do its job better the next time. Both the spam and antivirus receive daily definitions with the latest threads. Those definitions are update by huge community around the world, so that we learn quickly about new threads. Spam filtering intensity can be managed per user.
+<br/><img src="/img/products/antispam.png" width="500px">
+
+## Driven by a community
+
+Our mail servers run "Mailu", the insular mail distribution. This is a community based, open source project. Where programmers, system administrators and tech enthusiasts are working together to make mail management less painful. Under our GitHub pseudonym "usrpro" we are mayor contributors and supporters of this project. This project allows us to give our clients premium, enterprise level mail hosting at low costs.
+
+### Our mail "services"
+1. Mail hosting. Your domain will be hosted, along with other clients and ourselves, on our central mail server. You will have full control on your domain's users. You will benefit from our predefined settings and properly trained spam filter. "Pay as you go" makes this a very affordable package for small businesses.
+2. Dedicated mail server. We will install, run and maintain your mail server. We take care of all the hassle with the operating system, Docker and Mailu configuration. We can scale the mail server to any mail traffic and storage requirements. You will be able to host as many domain and as many users you like. This package is ideal for IT companies that want to get rid of the hassle of maintaining mail servers for their projects.
+3. On-site mail server. Run your own server and we will help you to install Mailu, train your IT department in its usage. We can provide service level agreements for maintaining Mailu and rapid response to issues.
