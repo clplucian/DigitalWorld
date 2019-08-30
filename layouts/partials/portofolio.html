@@ -4,7 +4,7 @@
                     <div class="row">
                         <div class="container">
                             <h3 class="display-4 text-black">{{ with .Site.GetPage "section" "portofolio" }}{{ .Title }}{{ end }}</h3>
-                            <div class="display-5 text-muted">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</div>
+                            <h4 class="display-5 text-muted">{{ with .Site.GetPage "section" "portofolio" }}{{ .Content }}{{ end }}</h4>
                         </div>
                         <div class="container">
                         <div class="row">
@@ -12,17 +12,16 @@
                             <div class="container text-left col-md-3">
                                 <div class="container">
                                     <a href="{{ .Permalink }}"><img src="{{ .Params.Image }}" alt="IMG" class="img-thumbnail shadow p-1 mb-2 bg-white rounded img-fluid"></a> 
-                                    <h4>{{ .Title }}</h4>
+                                    <h4 class="text-warning">{{ .Title }}</h4>
                                 </div>
                                 <div class="container" >
-                                    <p>{{ truncate 100 .Content }}</p>
+                                    <p>{{  .Summary }}</p>
                                 </div>
-                                <div class="row">
-                                </div>
+
                                 <div class="container pb-2">
                                 <a href="{{ .Permalink }}" class="btn btn-danger mt-2 shadow rounded-pill">Read More</a>
                                 </div>
-                                </div>
+                             </div>
                             {{ end }}
                             </div>
                             <a class="btn btn-outline-danger  mt-6" href="/portofolio">&xrarr; Our Portofolio </a>
